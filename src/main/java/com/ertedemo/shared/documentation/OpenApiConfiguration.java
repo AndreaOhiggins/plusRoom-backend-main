@@ -20,7 +20,7 @@ public class OpenApiConfiguration {
                                 "PlusRoom Platform application REST API documentation")
                         .version("v1.0.0")
                         .license(new License().name("Apache 2.0").url("https://springgoc.org")))
-                .servers(List.of(new Server().url("https://giving-perception-production.up.railway.app")))
+                .servers(List.of(new Server().url("https://easygoing-perception-production.up.railway.app")))
                 .externalDocs(new ExternalDocumentation()
                         .description("PlusRoom platform with Documentation")
                         .url("https://acme-learning-platform.wik.github.org/docs"));

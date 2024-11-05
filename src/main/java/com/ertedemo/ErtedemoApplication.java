@@ -27,7 +27,7 @@ public class ErtedemoApplication {
                 @Override
                     public void addCorsMappings(CorsRegistry registry) {
                         registry.addMapping("/**") // Permitir todas las rutas
-                            .allowedOrigins("https://giving-perception-production.up.railway.app") // Especificar tu dominio
+                            .allowedOrigins("https://easygoing-perception-production.up.railway.app") // Especificar tu dominio
                             .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Métodos permitidos
                             .allowedHeaders("*") // Permitir todos los encabezados
                             .allowCredentials(true); // Permitir credenciales si es necesario
