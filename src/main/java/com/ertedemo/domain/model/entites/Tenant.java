@@ -44,8 +44,8 @@ public class Tenant {
     @Column(name = "occupation")
     private String occupation;
 
-    @OneToMany(mappedBy = "tenant")
-    private List<Customer> customers;
+    //@OneToMany(mappedBy = "tenant")
+    //private List<Customer> customers;
 
     //@OneToMany(mappedBy = "recipient") // Mensajes recibidos por el tenant
     //private List<Message> receivedMessages;
@@ -57,8 +57,15 @@ public class Tenant {
     @Column(name = "photo")
     private String photo;
 
-    @ManyToMany(mappedBy = "tenants")
+    //
+    @ManyToMany
+    @JoinTable(
+            name = "tenant_notification",
+            joinColumns = @JoinColumn(name = "tenant_id"),
+            inverseJoinColumns = @JoinColumn(name = "notification_id")
+    )
     private List<Notification> listNotification;
+
 
     public Tenant() {
     }

@@ -33,13 +33,13 @@ public class NotificationServiceImpl implements NotificationService {
 
     @Override
     public void notifyLandlord(Customer customer) {
-        Notification notification = new Notification(List.of(customer.getTenant()), customer.getId(), new Date());
+        Notification notification = new Notification(List.of(customer.getTenant().getId()), customer.getId(), new Date());
         create(notification);
     }
 
     @Override
     public void notifyTenant(Customer customer) {
-        Notification notification = new Notification(List.of(customer.getTenant()), customer.getId(), new Date());
+        Notification notification = new Notification(List.of(customer.getTenant().getId()), customer.getId(), new Date());
         create(notification);
     }
 }

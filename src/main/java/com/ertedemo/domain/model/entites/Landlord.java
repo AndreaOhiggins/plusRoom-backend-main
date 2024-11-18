@@ -61,6 +61,7 @@ public class Landlord {
     private String photo;
 
     @OneToMany(mappedBy = "landlord")
+    @JsonManagedReference
     private List<Notification> listNotification;
 
     public Landlord() {
